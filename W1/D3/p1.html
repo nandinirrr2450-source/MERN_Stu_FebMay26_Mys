@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox layout</title>
+    <style>
+        .flex-container{
+            height: 200px;
+            display: flex;
+            background-color: aqua;
+            /*justify content used for horizantal allignment*/justify-content: space-evenly;/*space-around or flex-start or flex-end or space-between or space-evenly*/
+            /*align items used for verticle allignment*/align-items: center;/*baseline or center ect */
+            flex-direction: column-reverse;/*reverse the allignment from 1 2 3 to 3 2 1 (row-reverse or column-reverse)*/
+            flex-wrap: nowrap;/* it make sure every wrap in that box*(nowrap or wrap or wrap-reverse)*/
+
+        }
+        .flex-item{
+            background-color: blueviolet;
+            margin: 10px;
+            padding: 20px;
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display: flex</h1>
+    <div class="flex-container">
+        <div class="flex-item">content 1</div>
+        <div class="flex-item">content 2</div>
+        <div class="flex-item">content 3</div>
+        <div class="flex-item">content 4</div>
+        <div class="flex-item">content 5</div>
+        <div class="flex-item">content 6</div>
+        <div class="flex-item">content 7</div>
+        <div class="flex-item">content 8</div>
+        <div class="flex-item">content 9</div>
+    </div>
+    
+</body>
+</html>

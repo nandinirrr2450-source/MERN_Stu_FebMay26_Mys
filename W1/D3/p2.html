@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout system</title>
+    <style>
+        .grid-pixels{
+            display: grid;
+            grid-template-columns: 100px 150px 200px;
+            gap: 10px;/* adds spacing / gap between grids*/
+
+        }
+        .grid-percent{
+            display: grid;
+            grid-template-columns: 30% 40% 30%;
+            gap: 10px;/* adds spacing / gap between grids*/
+            margin: 20px;
+
+        }
+        .grid-fr{
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 10px;/* adds spacing / gap between grids*/
+
+        }
+        .item{
+            background-color: brown;
+            color: aquamarine;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--Fixed width column using pixels-->
+    <div class="grid-pixels"><!--grid container-->
+        <div class="item">100px</div>
+        <div class="item">150px</div>
+        <div class="item">200px</div>
+
+    </div>
+      <!--Fixed width column using percentage-->
+    <div class="grid-percent"><!--grid container-->
+        <div class="item">30%</div>
+        <div class="item">40%</div>
+        <div class="item">30%</div>
+
+    </div>
+
+        <!--Fixed width column using fractional columns-->
+    <div class="grid-fr"><!--grid container-->
+        <div class="item">1fr</div>
+        <div class="item">2fr</div>
+        <div class="item">1fr</div>
+
+    </div>
+    
+    
+</body>
+</html>
