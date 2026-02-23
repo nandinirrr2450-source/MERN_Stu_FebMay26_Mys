@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index</title>
+    <style>
+        .container{
+            position: relative;
+            height: 300px;
+        }
+        .box1,.box2{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            padding: 20px;
+            color: whitesmoke;
+            text-align: center;
+        }
+        .box1{
+            background-color: papayawhip;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+        .box2{
+            background-color: rgb(1, 1, 49);
+            top: 80px;
+            left: 80px;
+            z-index: 2;
+            opacity: 60%;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>Z-Index example</h2>
+    <div class="container">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+    </div>
+    
+</body>
+</html>
