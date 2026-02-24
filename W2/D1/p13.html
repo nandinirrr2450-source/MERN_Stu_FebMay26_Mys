@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Rules</title>
+    <style>
+       .notice{
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+       }
+       .notice{
+        background-color: chocolate;
+
+       }
+       @media  screen and (max-width: 768px) {
+        .notice{
+            background-color: palegreen;
+        }
+        
+       }
+         @media  screen and (min-width: 769px) and (max-width: 1024px) {
+        .notice{
+            background-color: palevioletred;
+            color: white;
+        }
+        
+       }
+       @media screen and (orientation: landscape) {
+        body{
+            background-color: lightyellow;
+        }
+        
+       }
+    </style>
+</head>
+<body>
+    <div class="notice">
+        Resize or rotate the device 
+    </div>
+    
+</body>
+</html>
