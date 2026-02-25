@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Form Styling Fundamentals</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="m-6 space-x-2">
+        <input type="text" placeholder="Enter Name" class="peer border border-grey-800 rounded-md px-3 py-2 w-100">
+        <p class="text-red-500 mt-2 hidden peer-focus:block">
+            I show up when input is focused
+        </p>
+        <input type="checkbox" class="w-5 h-5 appearance-none border border-grey-800 rounded checked:bg-green-700 checked:border-blue-300 focus:ring-3">
+        <input type="radio" class="w-5 h-5 appearance-none border border-yellow-800 rounded checked:bg-pink-700 checked:border-red-300 focus:ring-3">
+    </div>
+</body>
+</html>

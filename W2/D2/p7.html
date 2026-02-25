@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Elements, Transitions & Animations task-2</title>
+    <style>
+        .container{
+            position: relative;
+            height: 200px;
+        }
+    
+        .box1{
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            background-color: crimson;
+            top: 50px;
+            left: 50px;
+            z-index: 2;
+        }
+        .box2{
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            background-color: burlywood;
+            top: 100px;
+            left: 100px;
+            z-index: 1;
+
+        }
+    </style>
+</head>
+<body>
+    <p>Position elements over each other using z-index</p>
+    <div class="container">
+    <div class="box1">BOX 1</div>
+    <div class="box2">BOX 2</div>
+    </div>
+    
+</body>
+</html>
