@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card component using grid</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <section class="shadow-lg p-6 space-y-3">
+        <h2 class="text-xl font-semibold">Card basics</h2>
+        <p>This is a simple card </p>
+
+    </section>
+    <section class="border rounded p-6 space-y-4">
+        <h2 class="text-xl font-semibold">Card other variant</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="rounded-xl p-6 shadow-sm">
+                <div class="font-semibold">shadow-sm</div>
+                <p class="text-sm">Simple card Layout</p>
+            </div>
+
+            <div class="rounded-xl p-6 shadow-md">
+                <div class="font-semibold">shadow-md</div>
+                <p class="text-sm">Simple card Layout</p>
+            </div>
+
+            <div class="rounded-sm p-6 shadow-lg">
+                <div class="font-semibold">shadow-lg</div>
+                <p class="text-sm">Simple card Layout</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="rounded-xl shadow-sm p-6">
+            <h2 class="font-bold">Card 1</h2>
+            <p>Mobile: Full width Desktop:one of the columns </p>
+        </article>
+
+        <article class="rounded-xl shadow-sm p-6">
+            <h2 class="font-bold">Card 2</h2>
+            <p>Mobile: Full width Desktop:one of the columns </p>
+        </article>
+    
+        <article class="rounded-xl shadow-sm p-6">
+            <h2 class="font-bold">Card 3</h2>
+            <p>Mobile: Full width Desktop:one of the columns </p>
+        </article>
+
+        <article class="rounded-xl shadow-sm p-6">
+            <h2 class="font-bold">Card 4</h2>
+            <p>Mobile: Full width Desktop:one of the columns </p>
+        </article>
+
+        <article class="rounded-xl shadow-sm p-6">
+            <h2 class="font-bold">Card 5</h2>
+            <p>Mobile: Full width Desktop:one of the columns </p>
+        </article>
+
+        <article class="rounded-xl shadow-sm p-6">
+            <h2 class="font-bold">Card 6</h2>
+            <p>Mobile: Full width Desktop:one of the columns On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains </p>
+        </article>
+    </section>
+</body>
+</html>
