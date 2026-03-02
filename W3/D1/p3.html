@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Variables and hosting</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+    <pre id="out">
+
+    </pre>
+    <button id="runbtn" class="px-3 py-2 rounded bg-red-100 mt-2 mb-2">
+        Run
+    </button>
+    <script>
+        const out = document.getElementById("out")
+        function print(...args) {
+            //console 
+            console.log(...args)
+            out.textContent += args.join("") + "\n"
+        }
+        function run() {
+            clearOut()
+            if (true){
+                var x = "var escapes the if-block"
+            }
+            print("X value =",x)
+
+        //let scope
+        if(true){
+            let y = "let stays in the if-block"
+            print("y inside the block",y)
+        }
+         print("Before var declaration",testVar)
+        var testVar="assigned value now"
+        print("After var declaration",testVar)
+
+        //exception handling for hosting in let
+        try{
+            print("before let declaration",testLet)
+        }
+        catch(e){
+            print("accessing let before declaration causes",e.name,e.message)
+
+        }
+        let testLet = "declared now"
+        print("after let declaration",testLet)
+        //print("y outside the block",y) for checking scope of let
+            
+        }
+
+
+        function clearOut() {
+            out.textContent = ""//make clear everything in screen
+        }
+
+        document.getElementById("runbtn").addEventListener("click", run)
+        
+    </script>
+
+</body>
+
+</html>
