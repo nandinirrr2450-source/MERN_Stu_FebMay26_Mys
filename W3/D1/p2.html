@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Variables</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+    <pre id="out">
+
+    </pre>
+    <button id="runbtn" class="px-3 py-2 rounded bg-red-100 mt-2 mb-2">
+        Run
+    </button>
+    <script>
+        const out = document.getElementById("out")
+        function print(...args) {
+            //console 
+            console.log(...args)
+            out.textContent += args.join("") + "\n"
+        }
+        function run() {
+            clearOut()
+            print("hello from javascript")
+            print("2+3=", 2 + 3)
+            document.body.style.background = "#F5C227"
+            var a = 10
+            var a = 20
+            print("value of a =", a)
+            let b = 100
+            b = 200
+            //let b = 100 creates error if enabled 
+            print("value of let b=", b)
+
+            //const 
+            const pi = 3.1425
+            //pi=1.111 creates error in console
+            print("const value of pi =", pi)
+        }
+
+
+        function clearOut() {
+            out.textContent = ""//make clear everything in screen
+        }
+
+        document.getElementById("runbtn").addEventListener("click", run)
+        
+    </script>
+
+</body>
+
+</html>
