@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamberger icon based menu</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
     <nav class="border rounded-b-xl h-16 px-6 flex justify-between ">
         <div class="flex justify-between items-center px-4 h-16">
-        <div class="flex gap-6 items-center ">
-            <a href="#" class="font-bold text-lg ">Gola</a>
-            <ul class="gap-6 text-blue-700 hidden md:flex items-center">
-                <li><a href="#" class="hover:text-black transition ">Home</a></li>
-                <li><a href="#" class="hover:text-black transition ">Features</a></li>
-                <li><a href="#" class="hover:text-black transition ">Contact</a></li>
-            </ul>
-        </div>
-        <div class="hidden md:flex items-center gap-3">
-            <a href="#" class="text-gray-500 hover:text-black transition">Login</a>
-        </div>
-        <button id="menu-btn" class="md:hidden items-center Justify-center rounded-lg  border px-1 py-2 hover:bg-gray-100 transition inline-flex" 
-        aria-label="Toggle Menu"
-        aria-expanded="false"
-        aria-controls="mobileMenu"
-        >
-        <span class="text-xl leading-none">☰</span>
-        </button>
+            <div class="flex gap-6 items-center ">
+                <a href="#" class="font-bold text-lg ">Gola</a>
+                <ul class="gap-6 text-blue-700 hidden md:flex items-center">
+                    <li><a href="#" class="hover:text-black transition ">Home</a></li>
+                    <li><a href="#" class="hover:text-black transition ">Features</a></li>
+                    <li><a href="#" class="hover:text-black transition ">Contact</a></li>
+                </ul>
+            </div>
+            <div class="hidden md:flex items-center gap-3">
+                <a href="#" class="text-gray-500 hover:text-black transition">Login</a>
+            </div>
+            <button id="menu-btn"
+                class="md:hidden items-center Justify-center rounded-lg  border px-1 py-2 hover:bg-gray-100 transition inline-flex"
+                aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span class="text-xl leading-none">☰</span>
+            </button>
         </div>
         <div id="mobileMenu" class="hidden md:hidden border-t">
             <div class="px-6 py-4 space-y-6">
@@ -45,13 +45,14 @@
     <script>
         const menuBtn = document.getElementById("menu-btn")
         const mobileMenu = document.getElementById("mobileMenu")
-        menuBtn.addEventListener("click",()=>{
+        menuBtn.addEventListener("click", () => {
             mobileMenu.classList.toggle("hidden")
             mobileMenu.classList.toggle("block")
-            const expanded = menuBtn.getAttribute("arian-expanded")=="true"
-            menuBtn.setAttribute("aria-expanded",string(!expanded))
+            const expanded = menuBtn.getAttribute("arian-expanded") == "true"
+            menuBtn.setAttribute("aria-expanded", string(!expanded))
         })
     </script>
-    
+
 </body>
+
 </html>
