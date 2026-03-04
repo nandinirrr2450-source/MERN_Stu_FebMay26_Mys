@@ -1,6 +1,6 @@
 //Nested objects and method
 const student={
-    fisrtname:"Rohit",
+    firstname:"Rohit",
     lastname:"Raj M",
     scores:{
         math: 85,
@@ -8,7 +8,7 @@ const student={
 
     },hobbies:["badminton","roaming"],
     fullname:function(){
-        return this.fisrtname+""+this.lastname;
+        return this.firstname+" "+this.lastname;
     },
     greet(){
         console.log("hi, ",this.fullname());
@@ -18,9 +18,11 @@ const student={
 
 
 };
-console.log(student)
-console.log(student.scores.math)
-console.log(student.hobbies)
-console.log(student.hobbies[0])
+
+// console.log(student)
+// console.log(student.scores.math)
+// console.log(student.hobbies)
+// console.log(student.hobbies[0])
+student.greet()
 
 //a function stored inside an object termed as object
