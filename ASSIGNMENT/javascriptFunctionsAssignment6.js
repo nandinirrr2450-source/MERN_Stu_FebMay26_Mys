@@ -1,30 +1,21 @@
-//Assignment 6:Role-Based Route Resolver Using switch + Functions Problem statement
-const getRoute = function(role, isLoggedIn) {
+//Assignment 6: JSON Audit on a Single Report
 
-    if (!isLoggedIn) {
-        return "/login";
-    } else {
-        switch (role) {
-            case "admin":
-                return "/admin";
+function auditReport(reportJSON) {
+  const data = JSON.parse(reportJSON);
+  const modules = data.modules;
+  
+  let okCount = 0;
+  let failCount = 0;
+  const moduleKeys = Object.keys(modules);
+ const summary = { okCount, failCount };
 
-            case "student":
-                return "/student";
+  return {
+    summaryObject: summary,
+    summaryJSON: JSON.stringify(summary)
+  };
+}
+const sampleData = '{"app": "Portal","status": "OK","modules": {"auth": "OK","payment": "OK","results": "FAIL","profile": "OK"}}';
+const result = auditReport(sampleData);
 
-            case "college":
-                return "/college";
-
-            case "proctor":
-                return "/proctor";
-
-            default:
-                return "/denied";
-        }
-    }
-};
-console.log(getRoute("admin", true)); 
-console.log(getRoute("student", true)); 
-console.log(getRoute("college", true)); 
-console.log(getRoute("proctor", true)); 
-console.log(getRoute("guest", true)); 
-console.log(getRoute("admin", false));
+console.log("Summary Object:", result.summaryObject);
+console.log("Summary JSON:", result.summaryJSON);
