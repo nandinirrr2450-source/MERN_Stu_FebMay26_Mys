@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# Notes
+*.txt
+
+# Logs
+*.log
+
+# Package files (optional)
+package-lock.json
+
+# OS files
+Thumbs.db
+ 
+#package.json file
+package.json
+
+#support file
+support
