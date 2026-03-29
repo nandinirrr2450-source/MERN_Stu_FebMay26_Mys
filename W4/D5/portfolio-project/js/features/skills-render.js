@@ -19,7 +19,7 @@ function renderSkills(){
 
         //create icon text
         const iconText=document.createElement("span");
-        iconText.className="text-2xl text-white font-bold";
+        iconText.className="text-2xl text-white font-bold ";
         iconText.textContent=skill.shortLabel;
 
         //puts icontext inside iconbox
@@ -43,18 +43,6 @@ function renderSkills(){
         skillsContainer.appendChild(card);
     });
 
-    // card.addEventListener("click",function(){
-
-    //     const skilldetailDescription=document.createElement("p");
-    //     skilldetailDescription.className="text-sm";
-    //     skilldetailDescription.textContent="had hands on"
-    //     skilldetailDescription.style.color="black"
-
-
-    //     setTimeout(function(){
-    //         modal.classList.add("hidden")
-    //     },200)
-    // })
     console.log("skills rendered successfully");
     
 }

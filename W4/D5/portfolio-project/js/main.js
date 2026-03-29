@@ -5,5 +5,6 @@ document.addEventListener("DOMContentLoaded",function(){
     initModal();
     initThemeToggle();
     renderproject();
+    renderExperience();
 })
 

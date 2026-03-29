@@ -23,5 +23,12 @@
  .dark-mode .text-gray-700{
     color: white;
 }
- 
+.dark-mode h1{
+    color: white;
+}
+mark {
+    background-color: yellow;
+    color: black;
+    padding: 2px;
+}
  
