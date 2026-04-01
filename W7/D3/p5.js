@@ -19,10 +19,14 @@ console.log("Header section: ",tokenParts[0])
 console.log("Payload section: ",tokenParts[1])
 console.log("Signature section: ",tokenParts[2])
 console.log("JWT part count : ",tokenParts.length)
+//it will become invalid token
+//const newsecretKey="monkey123"
 
 try{
     //jwt.verify() checks trust,signature and expiration
     const verifiedPayload=jwt.verify(token,secretKey)
+    //const verifiedPayload=jwt.verify(token,newsecretKey)
+    //it will become invalid token
     console.log("verified Payload: ",verifiedPayload)
 }
 catch(error){
