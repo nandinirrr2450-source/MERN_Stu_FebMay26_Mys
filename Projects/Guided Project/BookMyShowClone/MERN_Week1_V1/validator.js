@@ -26,6 +26,7 @@ function validateSeatCount(seatCount,callback){
     callback(null,seatCount)
 }
 
+
 module.exports={
     validateMovieSelection,
     validateTimeSelection,
