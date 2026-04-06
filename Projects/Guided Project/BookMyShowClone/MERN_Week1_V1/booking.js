@@ -55,7 +55,7 @@ function confirmBooking(booking,showtime){
             //reducing overall seat count after booking
             showtime.seatsAvailable-=booking.seatCount
             currentBooking=booking
-            bookingEmitter.emit("bookingConfirmed",booking)
+            bookingEmitter.emit("booking Confirmed",booking)
             resolve(booking)
         },300)
     })
@@ -63,17 +63,17 @@ function confirmBooking(booking,showtime){
 
 //Promise chaining
 function processBooking(movie,showtime,seatCount){
-    bookingEmitter.emit("bookingStarted")
+    bookingEmitter.emit("booking Started")
 
     return checkDuplicateBooking(movie,showtime,seatCount)
     .then(()=>{
-        bookingEmitter.emit("bookingValidated")
+        bookingEmitter.emit("booking Validated")
         return checkSeatAvailability(showtime,seatCount)
     })
     .then(()=>generateBookingDetails(movie,showtime,seatCount))
     .then((booking)=>confirmBooking(booking,showtime))
     .catch((error)=>{
-        bookingEmitter.emit("booking  failed",error)
+        bookingEmitter.emit("booking Failed",error)
         throw error
     })
 }
@@ -81,7 +81,7 @@ function processBooking(movie,showtime,seatCount){
 //async await approach
 async function processBookingAsync(movie,showtime,seatCount){
     try{
-        bookingEmitter.emit("Booking started")
+        bookingEmitter.emit("booking Started")
         await checkDuplicateBooking(movie,showtime,seatCount)
         bookingEmitter.emit("booking Validated")
 
