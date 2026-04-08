@@ -18,7 +18,7 @@ const { cancelBooking } = require("./cancel");
 const {
   ensureDirectories, 
   initializeBookingsFileSync,
-  readBookingsSync, 
+  readBookingSync, 
   listDataFilesSync, 
   renameLogFileSync, 
   deleteArchivedLogSync, 
@@ -106,7 +106,7 @@ function viewCurrentBooking() {
 
 // new code V2.0 
 function viewSavedBookings() {
-  const bookings = readBookingsSync();
+  const bookings = readBookingSync();
 
   if (!bookings.length) {
     console.log(chalk.yellow("\nNo saved bookings found in file."));
