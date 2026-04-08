@@ -122,7 +122,7 @@ function renameLogFileSync(){
 function deleteArchivedLogSync(){
 
     if(fs.existsSync(archivedLogFile)){
-        fs.unlinkSync(logFile,archivedLogFile)
+        fs.unlinkSync(archivedLogFile)
         return true
     }
     return false
@@ -141,7 +141,7 @@ module.exports={
     readBookingAsync,
     readBookingSync,
     writeBookingAsync,
-    writeFileSync,
+    //writeFileSync,
     appendBookingAsync,
     renameLogFileSync,
     deleteArchivedLogSync,
