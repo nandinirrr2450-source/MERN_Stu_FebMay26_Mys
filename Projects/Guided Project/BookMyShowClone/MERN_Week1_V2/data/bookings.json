@@ -1,0 +1,37 @@
+[
+  {
+    "bookingId": "BOOK-1775639251557",
+    "movieId": 3,
+    "movieTitle": "Hayagreeva",
+    "time": "11:00 AM",
+    "seatCount": 2
+  },
+  {
+    "bookingId": "BOOK-1775639360611",
+    "movieId": 3,
+    "movieTitle": "Hayagreeva",
+    "time": "11:00 AM",
+    "seatCount": 2
+  },
+  {
+    "bookingId": "BOOK-1775639407502",
+    "movieId": 3,
+    "movieTitle": "Hayagreeva",
+    "time": "2:00 PM",
+    "seatCount": 2
+  },
+  {
+    "bookingId": "BOOK-1775639681506",
+    "movieId": 2,
+    "movieTitle": "LoveMocktail3",
+    "time": "1:00 PM",
+    "seatCount": 5
+  },
+  {
+    "bookingId": "BOOK-1775640764021",
+    "movieId": 1,
+    "movieTitle": "Dhurandar2",
+    "time": "1:00 PM",
+    "seatCount": 4
+  }
+]
