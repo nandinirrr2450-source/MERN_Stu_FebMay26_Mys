@@ -111,5 +111,5 @@ module.exports={
     getMovieById,
     addMovie,
     updateMovie,
-    deleteMovie,
+    deleteMovie
 }
