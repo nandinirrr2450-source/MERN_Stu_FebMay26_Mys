@@ -1,25 +1,26 @@
-//handles request related to movie
-const express = require("express")
+// Handles request related to movie
+const express = require("express");
+const {authMiddleware} = require("../middleware/authMiddleware");
+const {
+    getHome,
+    getAllMovies,
+    getMovieById,
+    addMovie,
+    updateMovie,
+    deleteMovie
+} = require("../controllers/movieController");
+const roleMiddleware = require("../middleware/roleMiddleware");
 
-const { authMiddleware } = require("../middleware/authMiddleware")
+const router = express.Router();
 
-const {getHome,getAllMovies,getMovieById,addMovie,updateMovie,deleteMovie}=require("../controllers/movieController")
+router.get("/",getHome);// sends req to home page
+router.get("/movies",getAllMovies);// sends req to get all movies
+router.get("/movies/:id",getMovieById);// sends req to get movies based on id
 
-const roleMiddleware=require("../middleware/roleMiddleware")
+router.post("/movies",authMiddleware,roleMiddleware("admin"),addMovie);//sends req to create new movie
+router.put("/movies/:id",authMiddleware,roleMiddleware("admin"),updateMovie);//sends req to update movie details
+router.delete("/movies/:id",authMiddleware,roleMiddleware("admin"),deleteMovie);//sends req to delete movie
 
-const router = express.Router()
-//sends req to home page
-router.get("/",getHome)
-//sends req to get all the movies available
-router.get("/movies",getAllMovies)
-//sends req to get /filter the movie based on ID
-router.get("/movies/:id",getMovieById)
+module.exports = router;
 
-//sends req to add new movie or create a movie
-router.post("/movies",authMiddleware,roleMiddleware("admin"),addMovie)
-//sends req to update a movie details
-router.put("/movies/:id",authMiddleware,roleMiddleware("admin"),updateMovie)
-//sends req to delete a movie
-router.delete("/movies/:id",authMiddleware,roleMiddleware("admin"),deleteMovie)
 
-module.exports=router
