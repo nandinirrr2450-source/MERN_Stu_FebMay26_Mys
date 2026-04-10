@@ -1,38 +1,43 @@
-//User Login,profile fetch and logout of user functionality created
-const jwt = require("jsonwebtoken")
-const users = require("../data/users")
-const customError = require("../utils/customError")
-const { JWT_SECRET } = require("../middleware/authMiddleware")
+// User login profile fetch and logout of user functionality created
+const jwt = require("jsonwebtoken");
+const users = require("../data/users");
+
+const CustomError = require("../utils/customError");
+
+const { JWT_SECRET } = require("../middleware/authMiddleware");
 
 function loginUser(req, res, next) {
     try {
-        const { email, password } = req.body
+        const { email, password } = req.body;
+
         if (!email || !password) {
-            return next(new customError("email/password are required.", 400))
+            return next(new CustomError("email/password are required.", 400));
         }
-        const user = users.find((u) => u.email === email && u.password === password)
+        const user = users.find((u) => u.email === email && u.password === password);
+
         if (!user) {
-            return next(new customError("Access denied: Invalid email/password.", 401))
+            next(new CustomError("Invalid email/password", 401));
         }
+
         const token = jwt.sign({
             id: user.id,
             name: user.name,
             email: user.email,
             role: user.role
-        }, JWT_SECRET, { expiresIn: "30m" })
-        //here we storing in cookie 
+        }, JWT_SECRET, { expiresIn: "30m" });
+
         res.cookie("token", token, {
             httpOnly: true,
             secure: false,
             maxAge: 60 * 60 * 1000
-        })
+        });
 
         req.session.user = {
             id: user.id,
             name: user.name,
             email: user.email,
             role: user.role
-        }
+        };
 
         res.status(200).json({
             success: true,
@@ -44,27 +49,26 @@ function loginUser(req, res, next) {
                 email: user.email,
                 role: user.role
             }
-        })
+        });
     }
-
     catch(error){
-        next(error)
+        next(error);
     }
 }
 
 function logoutUser(req,res,next){
     try{
-        req.session.destroy(()=>{
-            res.clearCookie("token")
-            res.status(200).json({
-                success: true,
-                message: "Logout successfull"
-            })
-        })
-    }
-    catch(error){
-        next(error)
-    }
+    req.session.destroy(()=>{
+        res.clearCookie("token");
+        res.status(200).json({
+            success: true,
+            message: "Logout successfull"
+        });
+    });
+}
+catch(error){
+    next(error);
+}
 }
 
 function getProfile(req,res,next){
@@ -72,18 +76,18 @@ function getProfile(req,res,next){
         res.status(200).json({
             success: true,
             message: "Profile fetched successfully",
-            user: req.user,
-            sessionUser:req.session.user || null
             
-        })
+            user:req.user,
+            sessionUser:req.session.user || null
+        });
     }
     catch(error){
-        next(error)
+        next(error);
     }
 }
 
-module.exports={
+module.exports = {
     loginUser,
     logoutUser,
     getProfile
-}
+};
