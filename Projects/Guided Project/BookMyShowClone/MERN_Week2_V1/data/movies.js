@@ -1,3 +1,5 @@
+
+// movies.js
 // This file stores the movie data used in the CLI App
 
 const movies = [
@@ -6,12 +8,12 @@ const movies = [
         title:"Dhurandar2",
         language:"Hindi",
         genre:"Action Thriller",
-        city:"Mysore",
+        city:"Mysuru",
         cinema:"Nexus Mall-Screen 1",
         showtimes:[
-            {time: "10:00 AM",seatsAvailable: 250},
-            {time: "1:00 PM",seatsAvailable: 250},
-            {time: "6:00 PM",seatsAvailable: 250}
+            {id:1,time: "10:00 AM",seatsAvailable: 250},
+            {id:2,time: "1:00 PM",seatsAvailable: 250},
+            {id:3,time: "6:00 PM",seatsAvailable: 250}
         ]
     },
     {
@@ -19,25 +21,25 @@ const movies = [
         title:"LoveMocktail3",
         language:"Kannada",
         genre:"Romantic",
-        city:"Mysore",
+        city:"Mysuru",
         cinema:"DRC Mall-Screen 2",
         showtimes:[
-            {time: "10:00 AM",seatsAvailable: 100},
-            {time: "1:00 PM",seatsAvailable: 90},
-            {time: "6:00 PM",seatsAvailable: 210}
+            {id:1,time: "10:00 AM",seatsAvailable: 100},
+            {id:2,time: "1:00 PM",seatsAvailable: 70},
+            {id:3,time: "6:00 PM",seatsAvailable: 200}
         ]
     },
     {
         id:3,
         title:"Hayagreeva",
-        language:"Kannada",
+        language:"Hindi",
         genre:"Action",
-        city:"Davangere",
-        cinema:"Davangere Mall-Screen 4",
+        city:"Mysuru",
+        cinema:"Mysuru Mall-Screen 4",
         showtimes:[
-            {time: "11:00 AM",seatsAvailable: 150},
-            {time: "2:00 PM",seatsAvailable: 200},
-            {time: "7:00 PM",seatsAvailable: 150}
+            {id:1,time: "11:00 AM",seatsAvailable: 240},
+            {id:2,time: "2:00 PM",seatsAvailable: 145},
+            {id:3,time: "7:00 PM",seatsAvailable: 270}
         ]
     }
 ];
