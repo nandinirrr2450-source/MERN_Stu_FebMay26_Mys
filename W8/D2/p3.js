@@ -47,10 +47,10 @@ async function demo(){
 
         await User.create([
             {
-                firstName: "Ravi",
-                lastName: "Kumar",
-                email: "rk@r.com",
-                username:"rk123",
+                firstName: "Nandini",
+                lastName: "Ravindra nayak",
+                email: "n@r.com",
+                username:"nr123",
                 role: "user",
                 createdAt: new Date("2026-04-09"),
                 tag: "demo-example"
