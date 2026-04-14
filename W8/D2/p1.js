@@ -23,9 +23,9 @@ const userSchema = new mongoose.Schema({
     const User = mongoose.model("VirtualUser",userSchema);
 
     const user = new User({
-        firstName: "Rakesh",
-        lastName: "Aradhya",
-        email: "r@r.com"
+        firstName: "Nandini",
+        lastName: "Ravindra nayak",
+        email: "n@r.com"
     });
 
     console.log("Hello, ",user.fullname);
