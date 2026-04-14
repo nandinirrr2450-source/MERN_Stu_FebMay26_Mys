@@ -28,10 +28,10 @@ async function runValidationDemo(){
 
         // await invalidUser.validate();
         const validUser = new User({
-            name:"Rakesh",
-            age:19,
+            name:"Nandini",
+            age:21,
             role:"admin",
-            email:"r@r.com"
+            email:"n@r.com"
         });
         await validUser.validate();
     }
