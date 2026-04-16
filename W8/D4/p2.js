@@ -27,7 +27,7 @@ async function main() {
 
         // const recent=await Model.find({
         //     createdAt:{
-        //         //
+        //         //900000 => is in miliseconds
         //         $gte: new Date(Date.now()-900000)
         //     }
         // })
