@@ -1,15 +1,31 @@
-//Aggregates posts from connected users
-const { getCurrentUser } = require("./user");
+//can see posts from connected users
+const { getCurrentUser, getAllUsers } = require("./user");
 const { getAllPosts } = require("./posts");
 
-async function viewFeed() {
-    const user = getCurrentUser();
+function viewFeed() {
+    const currentUser = getCurrentUser();
+    const users = getAllUsers();
+    const posts = getAllPosts();
 
-    const posts = getAllPosts().filter(p =>
-        user.connections.includes(p.authorId)
-    );
+    if (!currentUser) {
+        throw "Login required";
+    }
 
-    return posts.sort((a, b) => b.time - a.time);
+    // Get posts only from connections
+    const feed = posts.filter(p =>
+    currentUser.connections.includes(p.authorId) || p.authorId === currentUser.id);
+
+    return feed.map(p => {
+        const author = users.find(u => u.id === p.authorId);
+
+        return {
+            postId: p.id,
+            author: author ? author.name : "Unknown",
+            content: p.content,
+            likes: p.likes.length,
+            comments: p.comments.length
+        };
+    });
 }
 
 module.exports = { viewFeed };
