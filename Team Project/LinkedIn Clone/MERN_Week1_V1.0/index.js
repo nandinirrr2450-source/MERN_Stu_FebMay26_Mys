@@ -59,7 +59,7 @@ function menu() {
                                 rl.question("Password: ", async (password) => {
                                     try {
                                         await createProfile(name, role, username, password);
-                                        utils.success("Profile created successfully with username: ", username);
+                                        utils.success("Profile created successfully ");
                                     } catch (err) {
                                         utils.error(err);
                                     }
