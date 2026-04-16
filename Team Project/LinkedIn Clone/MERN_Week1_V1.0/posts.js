@@ -1,4 +1,4 @@
-//Handles post creation, feed generation, likes, and comments
+//Handles post creation, likes, and comments
 const { getCurrentUser } = require("./user");
 
 let posts = [];
@@ -21,13 +21,27 @@ async function createPost(content) {
     return post;
 }
 
+function commentOnPost(postId, text) {
+    const user = getCurrentUser();
+    const post = posts.find(p => p.id === postId);
+
+    if (!post) throw "Post not found";
+
+    post.comments.push({
+        userId: user.id,
+        text
+    });
+}
+
 function likePost(postId) {
     const user = getCurrentUser();
     const post = posts.find(p => p.id === postId);
 
     if (!post) throw "Post not found";
 
-    post.likes.push(user.id);
+    if (!post.likes.includes(user.id)) {
+        post.likes.push(user.id);
+    }
 }
 
 function getAllPosts() {
@@ -37,5 +51,7 @@ function getAllPosts() {
 module.exports = {
     createPost,
     likePost,
-    getAllPosts
+    getAllPosts,
+    commentOnPost
+
 };
