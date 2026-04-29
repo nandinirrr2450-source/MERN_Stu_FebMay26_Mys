@@ -5,6 +5,7 @@ import {PropsChildren} from "./components/p3.jsx"
 import { PropDrillingDemo } from "./components/p4.jsx"
 import { SharedStateParent } from "./components/p5.jsx"
 import { CompositionDemo } from "./components/p6.jsx"
+import { ObjectsArrayProps } from "./components/p7.jsx"
 import './App.css'
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
         {/* <PropsChildren/> */}
         {/* <PropDrillingDemo/> */}
         {/* <SharedStateParent/> */}
-        <CompositionDemo/>
+        {/* <CompositionDemo/> */}
+        <ObjectsArrayProps/>
     </>
   )
 }
