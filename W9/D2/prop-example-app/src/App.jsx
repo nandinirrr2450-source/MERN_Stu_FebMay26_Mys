@@ -9,6 +9,7 @@ import { ObjectsArrayProps } from "./components/p7.jsx"
 import { PropsImmutability } from "./components/p8.jsx"
 import { PropState } from "./components/p9.jsx"
 import { FunctionProps } from "./components/p10.jsx"
+import { PropTypesDemo } from "./components/p11.jsx"
 import './App.css'
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
         {/* <ObjectsArrayProps/> */}
         {/* <PropsImmutability/> */}
         {/* <PropState/> */}
-        <FunctionProps/>
+        {/* <FunctionProps/> */}
+        <PropTypesDemo/>
     </>
   )
 }
