@@ -10,6 +10,7 @@ import { PropsImmutability } from "./components/p8.jsx"
 import { PropState } from "./components/p9.jsx"
 import { FunctionProps } from "./components/p10.jsx"
 import { PropTypesDemo } from "./components/p11.jsx"
+import { HOCExample } from "./components/p12.jsx"
 import './App.css'
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
         {/* <PropsImmutability/> */}
         {/* <PropState/> */}
         {/* <FunctionProps/> */}
-        <PropTypesDemo/>
+        {/* <PropTypesDemo/> */}
+        <HOCExample/>
     </>
   )
 }
