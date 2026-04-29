@@ -12,11 +12,11 @@ const projectsData = [
   },
   {
     id: 2,
-    name: "Gola",
+    name: "LinkedIn Clone",
     category: "MERN",
     description:
-      "Cab booking platform that helps users quickly book rides for daily travel.",
-    technologies: ["ReactJS", "ExpressJS", "MongoDB"],
+      "Professional networking platform that allows users to create profiles, connect with others, and manage connection requests.",
+    technologies: ["NodeJS", "ExpressJS", "MongoDB"],
     status: "Live",
     liveDemo: "#",
     github: "#"
@@ -32,15 +32,15 @@ const projectsData = [
     liveDemo: "#",
     github: "#"
   },
-  {
-    id: 4,
-    name: "Developer Stats Dashboard",
-    category: "JavaScript",
-    description:
-      "Dynamic dashboard that loads developer statistics and profile insights using Fetch API.",
-    technologies: ["JavaScript", "Fetch API", "JSON"],
-    status: "Demo",
-    liveDemo: "#",
-    github: "#"
-  }
+  // {
+  //   id: 4,
+  //   name: "Developer Stats Dashboard",
+  //   category: "JavaScript",
+  //   description:
+  //     "Dynamic dashboard that loads developer statistics and profile insights using Fetch API.",
+  //   technologies: ["JavaScript", "Fetch API", "JSON"],
+  //   status: "Demo",
+  //   liveDemo: "#",
+  //   github: "#"
+  // }
 ];

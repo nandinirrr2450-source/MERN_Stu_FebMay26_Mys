@@ -1,9 +1,9 @@
 const skillsData = [
   {
     id: 1,
-    name: "ReactJS",
-    shortLabel: "R",
-    description: "Advanced Hooks, component-based UI, and state management.",
+    name: "HTML",
+    shortLabel: "H",
+    description: "Semantic markup, structured web content, and foundational page layout.",
     category: "Frontend"
   },
   {
