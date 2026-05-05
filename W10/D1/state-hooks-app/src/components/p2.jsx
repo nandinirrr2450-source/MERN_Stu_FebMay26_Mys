@@ -4,7 +4,7 @@ import { useState } from "react";
 export function UpdatingObjectsArraysState(){
     // user state
     const [user, setUser] = useState({
-        name:'Rakesh',
+        name:'Nandini',
         skill:'React'
     });
 
