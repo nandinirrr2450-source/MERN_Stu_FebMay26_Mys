@@ -7,6 +7,7 @@ import {UseContextIntro} from './components/p1.jsx'
 import {CustomHooksIntro} from './components/p2.jsx'
 import {UserRefIntro} from './components/p3.jsx'
 import {UseReducerIntro} from './components/p4.jsx'
+import {UseCallbackIntro} from './components/p5.jsx'
 
 function App() {
   return(
@@ -14,7 +15,8 @@ function App() {
         {/* <UseContextIntro/> */}
         {/* <CustomHooksIntro/> */}
         {/* <UserRefIntro/> */}
-        <UseReducerIntro/>
+        {/* <UseReducerIntro/> */}
+        <UseCallbackIntro/>
     </>
   )
 }
