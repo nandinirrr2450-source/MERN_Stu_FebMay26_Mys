@@ -2,6 +2,8 @@
 //Context: lets you share data between components without passing props manually through every level 
 
 import { createContext , useContext, useState } from "react";
+import {UseDocumentTitle} from "./p2.jsx"
+
 
 //creating a context
 const ThemeContext=createContext()
@@ -48,9 +50,11 @@ function Layout(){
     )
 }
 
+
 export function UseContextIntro(){
     //shared state
     const [theme,setTheme]=useState('light')
+    UseDocumentTitle('use document title as name to tab')
 
     const toggleTheme=()=>{
         setTheme(theme==='light'?'dark':'light')
@@ -63,6 +67,7 @@ export function UseContextIntro(){
             <ThemeContext.Provider value={theme}>
                 <Layout/>
             </ThemeContext.Provider>
+
         </section>
     )
 }
