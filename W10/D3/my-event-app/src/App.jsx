@@ -6,6 +6,7 @@ import './App.css'
 import {EventBasics} from "./components/p1.jsx"
 import {EventObject} from "./components/p2.jsx"
 import {PassingArguments} from "./components/p3.jsx"
+import {UseCallbackEvents} from "./components/p5.jsx"
 
 function App() {
   
@@ -14,7 +15,8 @@ function App() {
     <>
       {/* <EventBasics/> */}
       {/* <EventObject/> */}
-      <PassingArguments/>
+      {/* <PassingArguments/> */}
+      <UseCallbackEvents/>
     </>
   )
 }
