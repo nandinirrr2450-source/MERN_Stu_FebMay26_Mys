@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import {EventBasics} from "./components/p1.jsx"
 import {EventObject} from "./components/p2.jsx"
+import {PassingArguments} from "./components/p3.jsx"
 
 function App() {
   
@@ -12,7 +13,8 @@ function App() {
   return (
     <>
       {/* <EventBasics/> */}
-      <EventObject/>
+      {/* <EventObject/> */}
+      <PassingArguments/>
     </>
   )
 }
