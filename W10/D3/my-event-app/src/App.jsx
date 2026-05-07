@@ -11,6 +11,7 @@ import {EventDeligation} from "./components/p6.jsx"
 import {FormsPattern} from "./components/p7.jsx"
 import {KeyboardEvent} from "./components/p8.jsx"
 import {EventObj} from "./components/p9.jsx"
+import {Accessibility} from "./components/p10.jsx"
 
 function App() {
   
@@ -24,7 +25,8 @@ function App() {
       {/* <EventDeligation/> */}
       {/* <FormsPattern/> */}
       {/* <KeyboardEvent/> */}
-      <EventObj/>
+      {/* <EventObj/> */}
+      <Accessibility/>
     </>
   )
 }
