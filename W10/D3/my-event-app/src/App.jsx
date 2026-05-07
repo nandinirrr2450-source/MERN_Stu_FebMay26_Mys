@@ -8,6 +8,7 @@ import {EventObject} from "./components/p2.jsx"
 import {PassingArguments} from "./components/p3.jsx"
 import {UseCallbackEvents} from "./components/p5.jsx"
 import {EventDeligation} from "./components/p6.jsx"
+import {FormsPattern} from "./components/p7.jsx"
 
 function App() {
   
@@ -18,7 +19,8 @@ function App() {
       {/* <EventObject/> */}
       {/* <PassingArguments/> */}
       {/* <UseCallbackEvents/> */}
-      <EventDeligation/>
+      {/* <EventDeligation/> */}
+      <FormsPattern/>
     </>
   )
 }
