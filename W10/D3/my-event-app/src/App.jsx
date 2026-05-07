@@ -10,6 +10,7 @@ import {UseCallbackEvents} from "./components/p5.jsx"
 import {EventDeligation} from "./components/p6.jsx"
 import {FormsPattern} from "./components/p7.jsx"
 import {KeyboardEvent} from "./components/p8.jsx"
+import {EventObj} from "./components/p9.jsx"
 
 function App() {
   
@@ -22,7 +23,8 @@ function App() {
       {/* <UseCallbackEvents/> */}
       {/* <EventDeligation/> */}
       {/* <FormsPattern/> */}
-      <KeyboardEvent/>
+      {/* <KeyboardEvent/> */}
+      <EventObj/>
     </>
   )
 }
